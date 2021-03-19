@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 30%;
+}
+
+th {
+  height: 50px;
+}
+
+input[type=text], select {
+  width: 30%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 2px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+
+<script>
+function validation()
+{
+var a = document.form.From.value;
+var b = document.form.To.value;
+if(a=="")
+{
+alert("Please Enter From place");
+return false;
+}
+if(b=="")
+{
+alert("Please Enter Destination place");
+return false;
+}
+if(a===b)
+{
+alert("Please Enter Different places");
+return false;
+}
+
+}
+</script>
+</head>
+<body background="5.jpg">
+<center><h1> <font color="red"><i>Select Places for booking</i></font></h1></center>
+<form name="form" onsubmit="validation()" method="get" action="./plac">
+    <table align="center" border="3">
+      
+ <tr><th>
+ From:<select name="From">
+  <option value="Guntur">Guntur</option>
+  <option value="Tenali">Tenali</option>
+  <option value="Vijayawada">Vijayawada</option>
+  <option value="Hyderabad">Hyderabad</option>
+</select>
+<br>
+<br>
+<tr><th>
+To:<select name="To">
+  <option value="Guntur">Guntur</option>
+  <option value="Tenali">Tenali</option>
+  <option value="Vijayawada">Vijayawada</option>
+  <option value="Hyderabad">Hyderabad</option>
+</select>
+<br>
+<br>
+<tr><th>
+Select Date <input type="date" name="Date">
+    </th></tr>
+<br>
+<br>
+
+
+<tr><th>
+<input type="submit" name="sub" value="Submit"></a>
+    </th>
+</tr>
+    </table>
+</form>
+</body>
+</html>

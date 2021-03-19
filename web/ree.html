@@ -1,0 +1,50 @@
+<html>
+    <head>
+</head>
+
+<body bgcolor="skyblue">
+<center><h1> ONLINE RAILWAY RESERVATION</h1>
+<form name="registerForm" action="./ravi"  method="post">
+    <table>
+    <pre>  <b>
+  FOR ADULTS PRICE FOR 1 TICKET:100  
+   
+FOR CHILDREN PRICEFOR 1 TICKET:50
+        </b>
+</pre>
+    <tr>
+        <td>Enter no of tickets:</td>
+        <td><input type="text" name="Username"> </td>
+    </tr>
+    <tr>
+        <td>Enter no of adults:</td>
+        <td><input type="text" name="aname" id="aname"></td>
+    </tr>
+    <tr>
+        <td>Enter no of children:</td>
+        <td><input type="text"  name="cname" id="cname"> </td>
+    </tr>
+
+<tr>
+      <td><input type="button"  value="Price" onclick="add()"> </td>
+          <td> <input id="answer"></td>
+</tr><tr></tr>
+<script>
+function add(){
+var a,b,d;
+a=Number(document.getElementById("aname").value);
+b=Number(document.getElementById("cname").value);
+d= a*100 + b*50;
+document.getElementById("answer").value= d;
+}
+</script>
+<tr>
+    <td><input type="reset" value="Reset" name="Reset"></td>
+</tr>
+    </table>
+</form>
+    <a href="login.html"><button>submit</button></a>
+        
+    </center>
+</body>
+</html> 
